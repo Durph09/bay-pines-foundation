@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/bay-pines-foundation/static/css/main.c9b55e91.css",
+    "main.js": "/bay-pines-foundation/static/js/main.9f46ecd9.js",
+    "static/js/787.03a67249.chunk.js": "/bay-pines-foundation/static/js/787.03a67249.chunk.js",
+    "static/media/americanFlagWaving.mp4": "/bay-pines-foundation/static/media/americanFlagWaving.310c6d5a2b5be187a44f.mp4",
+    "static/media/vaPartner.png": "/bay-pines-foundation/static/media/vaPartner.e605b7b1dd09d724f808.png",
+    "static/media/teammeeting.jpg": "/bay-pines-foundation/static/media/teammeeting.fc27001366a7290ac9e9.jpg",
+    "static/media/doctorbloodpressure.jpg": "/bay-pines-foundation/static/media/doctorbloodpressure.8212af6219a56a16f124.jpg",
+    "static/media/nurse.jpg": "/bay-pines-foundation/static/media/nurse.03c3d0e90e852a9d7dc5.jpg",
+    "static/media/vetran.jpg": "/bay-pines-foundation/static/media/vetran.e97a273db73ae3080271.jpg",
+    "static/media/flagpalm.jpg": "/bay-pines-foundation/static/media/flagpalm.b9c858a62a6ce520e23a.jpg",
+    "static/media/labGirl.jpg": "/bay-pines-foundation/static/media/labGirl.2e3192ff232ece6a13b7.jpg",
+    "static/media/veteransParade.jpg": "/bay-pines-foundation/static/media/veteransParade.193c1d69947ed1e43f0c.jpg",
+    "static/media/lincoln.jpg": "/bay-pines-foundation/static/media/lincoln.7811a69d9fd763b50369.jpg",
+    "static/media/contactUs.jpg": "/bay-pines-foundation/static/media/contactUs.49947e85a84b3dce35aa.jpg",
+    "static/media/BayPinesVAMC.jpg": "/bay-pines-foundation/static/media/BayPinesVAMC.532b436b2878544821d3.jpg",
+    "static/media/bayPinesLogo.png": "/bay-pines-foundation/static/media/bayPinesLogo.87a0c22f7ffe22277337.png",
+    "index.html": "/bay-pines-foundation/index.html",
+    "main.c9b55e91.css.map": "/bay-pines-foundation/static/css/main.c9b55e91.css.map",
+    "main.9f46ecd9.js.map": "/bay-pines-foundation/static/js/main.9f46ecd9.js.map",
+    "787.03a67249.chunk.js.map": "/bay-pines-foundation/static/js/787.03a67249.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c9b55e91.css",
+    "static/js/main.9f46ecd9.js"
+  ]
+}
