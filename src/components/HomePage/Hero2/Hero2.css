@@ -28,6 +28,7 @@
     font-size: 2rem;
     font-weight: bold; 
     white-space: normal !important;
+    
   }
 
   .text-container::first-letter{
