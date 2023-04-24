@@ -4,7 +4,7 @@ import HeroCardSection from "./HeroCards/HeroCardSection";
 
 
 const HomePage = () => {
-  const text = "Advancing innovative research and education initiatives in support of veterans' health";
+  const text = "Bay Pines Foundation";
   const handleButtonClick = () => {
     console.log("Learn more button clicked");
   };
@@ -12,6 +12,7 @@ const HomePage = () => {
   return (
     <div>
       <Hero2 picURL={labgirl} displayText ={text} buttonClick={handleButtonClick} />
+      
       <HeroCardSection />
     </div>
   );

@@ -8,7 +8,7 @@ import Container from "react-bootstrap/Container";
 
 const HeroCardSection = () => {
   return (
-    <Container className="text-center overflow-hidden my-5">
+    <Container className="text-center overflow-hidden my-5 vh-75">
       <h2></h2>
       <Row className="my-5 py-5">
         <Col md={4} xs={12}>
