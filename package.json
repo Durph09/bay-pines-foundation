@@ -2,7 +2,7 @@
   "name": "bay-pines-foundation",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/Durph09/bay-pines-foundation",
+  "homepage": "https://Durph09.github.io/bay-pines-foundation",
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@testing-library/jest-dom": "^5.16.5",
