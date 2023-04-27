@@ -4,7 +4,7 @@ import HeroCardSection from "./HeroCards/HeroCardSection";
 
 
 const HomePage = () => {
-  const text = "Bay Pines Foundation";
+  const text = "Advancing innovative research and education initiatives in support of verterans' health";
   const handleButtonClick = () => {
     console.log("Learn more button clicked");
   };
