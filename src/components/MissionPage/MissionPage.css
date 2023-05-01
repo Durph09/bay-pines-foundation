@@ -1,0 +1,25 @@
+.about-us {
+    padding: 1rem 0;
+  }
+  
+  .article {
+    margin: 1rem 0;
+  }
+  
+  hr {
+    margin: 1rem 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .blockquote {
+    margin: 1rem 0;
+    font-style: italic;
+    font-size: 3rem;
+  }
+
+  .honor {
+    font-size: 5rem;
+    font-style: italic;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  

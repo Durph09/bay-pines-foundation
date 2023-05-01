@@ -6,15 +6,16 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import bayPinesVertLogo from "../../../assets/bayPinesVertLogo.png";
-import "./ImageCard.css";
 
 const HeroCardSection = () => {
   return (
-    <Container className="text-center overflow-hidden my-5 vh-75">
-       <img src={bayPinesVertLogo} alt="Bay Pines Foundation Logo" /> 
-      <h2 style={{display:"inline-block"}}><em>"To Honor and serve Veterans and their families"</em></h2>
+    <Container fluid className="text-center overflow-hidden my-5 vh-75" id="HeroCardSection">
+      <img src={bayPinesVertLogo} alt="Bay Pines Foundation Logo" />
+      <h2 style={{ display: "inline-block" }}>
+        <em>"To Honor and serve Veterans and their families"</em>
+      </h2>
 
-      <Row className="my-auto vh-75" >
+      <Row className="my-auto justify-content-between w-100">
         <Col md={4} xs={12} className="mb-2">
           <HeroCard
             imageSrc={nurse}
@@ -25,7 +26,6 @@ const HeroCardSection = () => {
             linkTo={"/missionpage"}
             cardLabel="About Us"
           />
-         
         </Col>
 
         <Col md={4} xs={12} className="mb-2">
@@ -38,7 +38,6 @@ const HeroCardSection = () => {
             linkTo={"/veteranspage"}
             cardLabel=" Veteran Resources"
           />
-          
         </Col>
         <Col md={4} xs={12} className="mb-2">
           <HeroCard
@@ -48,9 +47,8 @@ const HeroCardSection = () => {
             alt="veteran"
             buttonText="Learn More"
             linkTo={"/vapartners"}
-            cardLabel= "Our VA Partner"
+            cardLabel="Our VA Partner"
           />
-          
         </Col>
       </Row>
     </Container>

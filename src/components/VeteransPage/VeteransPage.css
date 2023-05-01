@@ -7,3 +7,34 @@ position: absolute;
   object-fit: cover;
   z-index: -3;
 }
+
+.heroContainer {
+  overflow: hidden;
+    height: 75vh;
+    width: 100vw;
+    position: relative;
+    z-index: 1;
+
+}
+
+.heroDiv {
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: -1;
+}
+  
+  .heroVid {
+    object-fit: cover;
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    height: 100vh;
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+  .bodyButton {
+    background-color: rgb(179,35,24);
+  }

@@ -14,7 +14,7 @@ const TextImageSlide = ({
     <Container>
       <Row className="overflow-hidden my-5 align-items-center">
         <Col md={6}>
-          <Slide triggerOnce direction="left">
+          <Slide triggerOnce direction="left" fraction='.7'>
             <Image
               src={srcTextImageSlide}
               alt={altTextImageSlide}
@@ -24,7 +24,7 @@ const TextImageSlide = ({
         </Col>
 
         <Col md={6} className="align-items-center">
-          <Slide triggerOnce direction="right">
+          <Slide triggerOnce direction="right" fraction='.5'>
             {" "}
             <blockquote className="blockquote">
               <h3>{textTextImageSlide}</h3>

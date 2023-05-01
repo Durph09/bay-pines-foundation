@@ -6,10 +6,17 @@ import Image from "react-bootstrap/Image";
 import veteransParade from "../../assets/veteransParade.jpg";
 import { Slide } from "react-awesome-reveal";
 import bayPinesLogo from "../../assets/bayPinesLogo.png";
+import "../../App.css";
+import "../TextImageSlide/TextImageSlide.css";
+import Container from "react-bootstrap/Container"
 
 const Contact = () => {
   const handleButtonClick = () => {
-    console.log("Learn more button clicked, smooth scroll to next section");
+    console.log("Learn more button clicked");
+
+    // Scroll to the HeroCardSection
+    const heroCardSection = document.querySelector("#contact");
+    heroCardSection.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -19,10 +26,11 @@ const Contact = () => {
         displayText="We're listening..."
         buttonClick={handleButtonClick}
       />
-
-      <Row className="vw-100 over-flow-hidden my-5 align-items-center">
-        <Col md={6}>
-          <Slide triggerOnce direction="left">
+<Container className="py-4">
+<h2>Contact Us</h2>
+      <Row className="vh-75 w-100 my-5 align-items-center" id="contact">
+        <Col md={6} className="align-items-center text-start">
+          <Slide triggerOnce direction="left" fraction=".5">
             <Image
               src={veteransParade}
               alt="Veterans in a parade"
@@ -31,8 +39,8 @@ const Contact = () => {
           </Slide>
         </Col>
 
-        <Col md={6} className="align-items-center text-start lh-lg">
-          <Slide triggerOnce direction="right">
+        <Col md={6} className="align-items-center text-start lh-lg overflow-hidden" >
+          <Slide triggerOnce direction="right" fraction=".5">
             <section>
               <div>
                 <div className=" text-left">
@@ -68,7 +76,7 @@ const Contact = () => {
             </section>
           </Slide>
         </Col>
-      </Row>
+      </Row></Container>
     </div>
   );
 };

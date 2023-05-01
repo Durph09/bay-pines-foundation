@@ -11,6 +11,9 @@ import { createBrowserRouter, createRoutesFromElements, Route, Link, Outlet, Rou
 import BoardPortalSignIn from './components/BoardPortalPage/BoardPortalSignIn';
 import Contact from './components/ContactPage/Contact';
 import VAPartner from './components/VAPartner/VAPartner';
+import ProtectedContent from './components/EmployeePortal/ProtectedContent';
+import PrivateRoute from './components/EmployeePortal/PrivateRoute';
+
 
 function App() {
 const router = createBrowserRouter(
@@ -24,6 +27,14 @@ const router = createBrowserRouter(
       <Route path='/boardportalsignin' element={<BoardPortalSignIn />} />
       <Route path='/contact' element={<Contact />} />
       <Route path='/vapartners' element={<VAPartner />} />
+      <Route
+          path="/protected"
+          element={
+            <PrivateRoute>
+              <ProtectedContent />
+            </PrivateRoute>
+          }
+        />
       
 
 
