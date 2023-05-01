@@ -2,15 +2,16 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useState, useEffect } from 'react';
 import { auth } from '../../Firebase';
-import { signInWithEmailAndPassword } from 'firebase/auth';
-import AuthDetails from './AuthDetails';
+import { signInWithEmailAndPassword, sendPasswordResetEmail } from 'firebase/auth';
+
 import { useNavigate } from 'react-router-dom';
 import useAuthState from './useAuthState';
 
 const EmployeePortalSignin = () => {
-  // State variables for email and password inputs
+  // State variables for email, password, and error message
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
   // Hook for navigating programmatically
   const navigate = useNavigate();
@@ -35,8 +36,28 @@ const EmployeePortalSignin = () => {
       })
       .catch((error) => {
         console.log(error);
+        if (error.code === 'auth/wrong-password') {
+          setErrorMessage('Incorrect password. Please try again.');
+        } else if (error.code ==="auth/user-not-found") {
+          setErrorMessage("User not found. Please try again")
+        }
       });
   };
+
+  //Function to handle password reset request
+    const requestNewPassowrd = () => {
+      sendPasswordResetEmail(auth, email)
+      .then(() => {
+        console.log("password reset email sent successfully");
+        setErrorMessage("Password reset email sent. Please check your inbox.")
+      })
+
+      .catch((error) => {
+        console.log (error);
+        setErrorMessage("Failed to send passoword reset email.  Please try agian later.");
+        
+      })
+    }
 
   // Render the sign-in form
   return (
@@ -49,7 +70,9 @@ const EmployeePortalSignin = () => {
             placeholder='Enter email'
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            required
           />
+          <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
           <Form.Text className='text-muted'>
             We'll never share your email with anyone else.
           </Form.Text>
@@ -63,15 +86,19 @@ const EmployeePortalSignin = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
+          {errorMessage && <Form.Text className='text-danger'>{errorMessage}</Form.Text>}
         </Form.Group>
 
         <Button variant='primary' type='submit'>
           Submit
         </Button>
+        <Button variant='link' onClick={requestNewPassowrd}>
+          Forgot password?
+        </Button>
       </Form>
+      
 
-      {/* Render the AuthDetails component */}
-      <AuthDetails />
+     
     </div>
   );
 };
