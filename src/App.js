@@ -8,10 +8,11 @@ import MeetOurTeamPage from './components/MeetOurTeamPage/MeetOurTeamPage';
 import VeteransPage from './components/VeteransPage/VeteransPage';
 import EmployeePortalSignin from './components/EmployeePortal/EmployeePortalSignIn';
 import { createBrowserRouter, createRoutesFromElements, Route, Link, Outlet, RouterProvider } from 'react-router-dom';
-import BoardPortalSignIn from './components/BoardPortalPage/BoardPortalSignIn';
+
 import Contact from './components/ContactPage/Contact';
 import VAPartner from './components/VAPartner/VAPartner';
 import ProtectedContent from './components/EmployeePortal/ProtectedContent';
+
 import PrivateRoute from './components/EmployeePortal/PrivateRoute';
 
 
@@ -24,10 +25,19 @@ const router = createBrowserRouter(
       <Route path='/missionpage' element={<MissionPage />} />
       <Route path='/meetourteampage' element={<MeetOurTeamPage />} />
       <Route path='/veteranspage' element={<VeteransPage />} />
-      <Route path='/boardportalsignin' element={<BoardPortalSignIn />} />
+      
       <Route path='/contact' element={<Contact />} />
       <Route path='/vapartners' element={<VAPartner />} />
       <Route
+          path="/protected"
+          element={
+            <PrivateRoute>
+              <ProtectedContent />
+            </PrivateRoute>
+          }
+        />
+
+<Route
           path="/protected"
           element={
             <PrivateRoute>

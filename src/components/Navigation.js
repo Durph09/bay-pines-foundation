@@ -77,7 +77,7 @@ function Navigation() {
               </NavDropdown.Item>
               <NavDropdown.Item
                 as={Link}
-                to={"/boardportalsignin"}
+                to={"/employeeportalsignin"}
                 onClick={handleCollape}
               >
                 Board Portal
@@ -90,7 +90,7 @@ function Navigation() {
               Contact
             </Nav.Link>
           </Nav>
-            
+
           <AuthDetails/>
         </Navbar.Collapse>
       </Container>
