@@ -5,6 +5,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import bayPinesVertLogo from "../assets/bayPinesVertLogo.png";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import AuthDetails from "./EmployeePortal/AuthDetails";
 
 function Navigation() {
   const [expanded, setExpanded] = useState(false);
@@ -30,7 +31,10 @@ function Navigation() {
       <Container>
         <Navbar.Brand as={Link} to={"/"}>
           <img src={bayPinesVertLogo} alt="Bay Pines Foundation Logo" />
-        </Navbar.Brand>
+        </Navbar.Brand> 
+
+        
+        
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
           onClick={handleCollape}
@@ -79,12 +83,15 @@ function Navigation() {
                 Board Portal
               </NavDropdown.Item>
             </NavDropdown>
+           
           </Nav>
           <Nav>
             <Nav.Link as={Link} to={"/contact"} onClick={handleCollape}>
               Contact
             </Nav.Link>
           </Nav>
+            
+          <AuthDetails/>
         </Navbar.Collapse>
       </Container>
     </Navbar>
